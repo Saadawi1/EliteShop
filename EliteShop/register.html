@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - EliteShop</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'pulse-slow': 'pulse 3s infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(6px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+          colors: {
+            'cream': '#FAF7F2',
+            'beige': '#F5F1EB',
+            'warm-orange': '#D4845C',
+            'light-orange': '#E89968',
+            'soft-gray': '#8B8B8B',
+            'dark-gray': '#6B6B6B',
+            'soft-green': '#7DBAA3',
+            'cream-white': '#FFFEF9',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-cream min-h-screen img flex items-center justify-center p-4">
+  <!-- Toast container -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="fixed inset-0 bg-cream-white/80 flex items-center justify-center z-50 hidden">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-warm-orange border-b-4 border-light-orange"></div>
+  </div>
+
+  <!-- Register Form -->
+  <form id="registerForm"
+    class="bg-cream-white backdrop-blur-sm shadow-2xl rounded-2xl p-8 border border-beige w-full max-w-md">
+    
+    <!-- Logo & Title -->
+    <div class="text-center mb-6">
+      <div class="w-16 h-16 bg-warm-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <span class="text-cream-white font-bold text-2xl">ES</span>
+      </div>
+      <h2 class="text-3xl font-bold text-dark-gray">Create Account</h2>
+      <p class="text-soft-gray mt-2">Sign up to get started</p>
+    </div>
+
+    <!-- Inputs -->
+    <div class="space-y-4">
+      <input type="text" id="name" placeholder="Full Name" required
+        class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-warm-orange/20 focus:border-warm-orange transition-all duration-300 bg-cream/30" />
+
+      <input type="email" id="email" placeholder="Email" required
+        class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-warm-orange/20 focus:border-warm-orange transition-all duration-300 bg-cream/30" />
+
+      <input type="password" id="password" placeholder="Password" required
+        class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-warm-orange/20 focus:border-warm-orange transition-all duration-300 bg-cream/30" />
+
+      <input type="text" id="phone" placeholder="Phone" required
+        class="w-full p-4 border border-gray-200 rounded-xl focus:ring-4 focus:ring-warm-orange/20 focus:border-warm-orange transition-all duration-300 bg-cream/30" />
+
+      <button type="submit"
+        class="w-full bg-warm-orange hover:bg-light-orange text-cream-white py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+        Register
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-6 pt-6 border-t border-beige">
+      <p class="text-soft-gray">
+        Already have an account?
+        <a href="login.html" class="text-warm-orange hover:text-light-orange font-medium transition-colors">
+          Login
+        </a>
+      </p>
+    </div>
+  </form>
+  <Script src="javaScript/index.js"></Script>
+  <script src="./javaScript/register.js" defer></script>
+</body>
+</html>

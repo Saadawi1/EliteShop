@@ -1,0 +1,20 @@
+.img{
+        background-image: url(./images/sustainable-clothes.jpg);
+
+}
+  .slider-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .category-card {
+    min-width: 200px;
+    flex-shrink: 0;
+    text-align: center;
+  }

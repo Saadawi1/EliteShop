@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteShop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'pulse-slow': 'pulse 3s infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(6px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          },
+          colors: {
+            'cream': '#FAF7F2',
+            'beige': '#F5F1EB',
+            'warm-orange': '#D4845C',
+            'light-orange': '#E89968',
+            'soft-gray': '#8B8B8B',
+            'dark-gray': '#6B6B6B',
+            'soft-green': '#7DBAA3',
+            'cream-white': '#FFFEF9',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+      <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-orange-500">EliteShop</a>
+
+      <!-- Links -->
+      <ul id="nav-links-desktop" class="hidden md:flex space-x-6 text-gray-600"></ul>
+    </div>
+  </nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden fixed top-0 left-0 w-2/3 h-full bg-white shadow-lg z-40 p-6 transition-transform transform -translate-x-full">
+  <ul id="nav-links-mobile" class="flex flex-col space-y-6 text-gray-600 font-medium md:hidden"></ul>
+
+</div>
+    <!-- محتوى رئيسي -->
+    <main class="p-6 text-center">
+        <h2 class="text-2xl font-bold text-gray-700">Welcome to EliteShop</h2>
+        <p class="mt-4 text-gray-600">Your premium shopping experience</p>
+    </main>
+    <!-- Footer -->
+    
+    <script src="./javaScript/index.js" defer></script>
+    <script src="./javaScript/authGuard.js" defer></script>
+</body>
+</html>
